@@ -46,6 +46,20 @@ h3 {
     color: $paseo;
 }
 
+.btn-flotante {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem 2rem;
+    @include button( $primario, $claro );
+}
+
+.btn-flotante.activo,
+.btn-flotante:hover {
+    bottom: 1rem;
+    right: 1rem;
+}
+
 
 // Hero
 .hero {
@@ -169,3 +183,64 @@ h3 {
     color: $oscuro;
     font-size: .9rem;
 }
+
+// Premium
+.premium {
+    background-image: url('../img/hospedaje-pro.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    grid-template-columns: unset;
+    height: 30rem;
+
+    @include tablet {
+        grid-template-columns: auto 30%;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+
+        h3 {
+            text-align: center;
+            font-size: 2.2rem;
+            
+            @include tablet {
+                text-align: right;
+            }
+        }
+
+        @include tablet {
+            grid-column:  2 / 3;
+        }
+    }
+}
+
+.boton {
+    display: block;
+    padding: 1rem;
+    @include button( $primario, $claro );
+}
+
+// Destinos
+.destinos {
+    .contenedor-cards {
+        grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+    }
+
+    .card {
+        position: relative;
+    }
+
+    .info {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+
+        .titulo {
+            color: $claro;
+        }
+    }
+}
+
