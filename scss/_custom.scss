@@ -30,6 +30,22 @@ h3 {
     margin: 0 auto;
 }
 
+.hospedaje {
+    color: $hospedaje;
+}
+
+.concierto {
+    color: $concierto;
+}
+
+.clase {
+    color: $clase;
+}
+
+.paseo {
+    color: $paseo;
+}
+
 
 // Hero
 .hero {
@@ -124,3 +140,32 @@ h3 {
     }
 }
 
+
+// Cotenido Principal
+// Cards
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr ) );
+    grid-column-gap: 1rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.info .categoria {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .titulo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.info .precio {
+    color: $oscuro;
+    font-size: .9rem;
+}
