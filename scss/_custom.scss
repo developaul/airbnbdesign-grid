@@ -29,3 +29,98 @@ h3 {
     max-width: 1100px;
     margin: 0 auto;
 }
+
+
+// Hero
+.hero {
+    height: 100vh;
+    background-image: url( '../img/arriba.jpg' );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+// Header
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    align-items: center;
+    padding-top: 1rem;
+
+    .navegacion {
+
+        a {
+            text-decoration: none;
+            color: $claro;
+            margin-right: 1rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Contenido Hero
+.contenido-hero {
+    display: grid;
+    grid-template: max-content auto / 5% auto 5%;
+
+    h1 {
+        grid-column: 2 / 3;
+        color: $claro;
+    }
+
+    form {
+        grid-area: 2 / 2 / 3 / 3;
+        position: relative;
+        display: flex;
+        height: 4rem;
+
+        input[type="text"] {
+        //     flex: 0 1 1;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-image: url( '../img/lupa.png' );
+            background-repeat: no-repeat;
+            background-position: calc( 1% + 1rem ) calc( 1% + .7rem );
+            padding-left: 5rem;
+            font-size: .8rem;
+
+            @include tablet {
+                flex: 1;
+                font-size: 1.6rem;
+            }
+        }
+
+        input[type="submit"] {
+            position: absolute;
+            width: 100%;
+            bottom: -2.8rem;
+            padding: .7rem 2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: $primario;
+            color: $claro;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+
+            @include tablet {
+                top: .6rem;
+                right: 1rem;
+                width: unset;
+                height: 3rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
